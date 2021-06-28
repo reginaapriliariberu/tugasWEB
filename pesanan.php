@@ -63,7 +63,7 @@ if (!isset($_SESSION['login_user'])) {
           <div class="container">
             <div class="judul-pesanan mt-5">
 
-              <h3 class="text-center font-weight-bold">DATA PESANAN PELANGGAN</h3>
+              <h3 class="text-center font-weight-bold">DATA PESANAN </h3>
 
             </div>
             <table class="table table-bordered" id="example">
