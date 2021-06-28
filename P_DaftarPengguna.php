@@ -59,7 +59,7 @@ if (!isset($_SESSION['login_user'])) {
 
                 <div class="col-10" style="background-color: #CCF5FC">
 
-                    <h1 style="text-align: center; font-size: 30px; padding-top: 10px;"><span class="font-weight-bold">KELONGTONG BARU</span></h1>
+                    <h1 style="text-align: center; font-size: 30px; padding-top: 10px;"><span class="font-weight-bold">RESTORAN KELONGTONG BARU</span></h1>
 
                     <p class="lead font-weight-bold" style="text-align: center; font-size: 20px; ">"Daftar Data Pengguna dan Karyawan"</p>
                     <!-- Jumbotron -->
