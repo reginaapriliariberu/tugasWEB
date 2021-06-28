@@ -1,5 +1,4 @@
 <?php
-include('koneksi.php');
 session_start();
 if (!isset($_SESSION['login_user'])) {
   header("location: login.php");
@@ -19,13 +18,14 @@ if (!isset($_SESSION['login_user'])) {
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="index.css">
     <link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
 
     <title>Restoran Dessert Kelongtong</title>
   </head>
 
   <body>
+
+
+
 
     <header class="bg-danger" style=" height: 70px;">
       <div class="atas">
@@ -34,6 +34,8 @@ if (!isset($_SESSION['login_user'])) {
         </H3>
       </div>
     </header>
+
+
     <div class="container-fluid" style="margin-top: 0px;">
       <div class="row"></div>
       <div class="row">
@@ -61,51 +63,55 @@ if (!isset($_SESSION['login_user'])) {
           <!-- Akhir Jumbotron -->
           <!-- Menu -->
           <div class="container">
-            <div class="judul-pesanan mt-5">
+            <div class="judul text-center mt-5">
+              <h3 class="font-weight-bold">RESTORAN DESSERT KELONGTONG</h3>
+              <h5 style="font-weight: bold; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">WHO WE ARE</h5>
 
-              <h3 class="text-center font-weight-bold">DATA PESANAN </h3>
 
+              <div class="row mb-5 mt-5 ">
+                <div class="col-md-4 d-flex justify-content-end">
+
+                  <div class="container text-center">
+                    <img src="images/hana1.jpg" width="80%" class="rounded-circle img-thumbnail">
+                    <h5 style="font-size: 15px;">Hana Ramdhani(1810530121) <br>
+                      <p style="font-size: 12px; font-weight: bold;">BACK END Sisi Pelanggan</p>
+                    </h5>
+
+                  </div>
+                </div>
+
+
+                <div class="col-md-4 d-flex justify-content-start">
+                  <div class="container text-center">
+                    <img src="images/mahsus.jpg" width="80%" class="rounded-circle img-thumbnail">
+                    <h5 style="font-size: 15px;">Mahsus Afriandy(17105210109) <br>
+                      <p style="font-size: 12px; font-weight: bold;">FRONT END</p>
+                    </h5>
+
+
+                  </div>
+                </div>
+                <div class="col-md-4 d-flex justify-content-start">
+                  <div class="container text-center">
+                    <img src="images/de.jpg" width="80%" class="rounded-circle img-thumbnail">
+                    <h5 style="font-size: 15px;">Regina Aprilia Riberu(1801530132) <br>
+                      <p style="font-size: 12px; font-weight: bold;">BACK END Sisi Admin</p>
+                    </h5>
+
+
+                  </div>
+                </div>
+
+
+
+
+              </div>
             </div>
-            <table class="table table-bordered" id="example">
-              <thead class="thead-dark">
-                <tr>
-                  <th scope="col">No.</th>
-                  <th scope="col">ID Pemesanan</th>
-                  <th scope="col">Tanggal Pesan</th>
-                  <th scope="col">Total Bayar</th>
-                  <th scope="col">Opsi</th>
-                </tr>
-              </thead>
-              <tbody>
-                <?php $nomor = 1; ?>
-                <?php
-                $ambil = mysqli_query($koneksi, 'SELECT * FROM pemesanan');
-                $result = mysqli_fetch_all($ambil, MYSQLI_ASSOC);
-                ?>
-                <?php foreach ($result as $result) : ?>
-
-                  <tr>
-                    <th scope="row"><?php echo $nomor; ?></th>
-                    <td><?php echo $result["id_pemesanan"]; ?></td>
-                    <td><?php echo $result["tanggal_pemesanan"]; ?></td>
-                    <td>Rp. <?php echo number_format($result["total_belanja"]); ?></td>
-                    <td>
-
-                      <a href="detail_pesanan.php?id=<?php echo $result['id_pemesanan'] ?>" class="btn btn-primary btn-xs data-tampil"><i class="fa fa-eye"></i></a>
-                      <a href="clear_pesanan.php?id=<?php echo $result['id_pemesanan'] ?>" class="btn btn-danger btn-xs delete"><i class="fa fa-trash"></i></a>
-                      <a href="laporan.php?id=<?php echo $result['id_pemesanan'] ?>" class="btn btn-info btn-xs printer"><i class="fa fa-print"></i></a>
-                    </td>
-                  </tr>
-                  <?php $nomor++; ?>
-                <?php endforeach; ?>
-              </tbody>
-            </table>
           </div>
           <!-- Akhir Menu -->
 
         </div>
       </div>
-    </div>
     </div>
 
     <footer class="bg-danger" style=" height: 70px;">
@@ -114,9 +120,7 @@ if (!isset($_SESSION['login_user'])) {
         <img src="images/smile.png" class="mr-1 ml-2" data-toggle="tooltip" title="Facebook">
       </div>
     </footer>
-
-
-
+    <!-- Akhir Footer -->
 
 
     <!-- Optional JavaScript -->
@@ -126,14 +130,6 @@ if (!isset($_SESSION['login_user'])) {
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/jquery.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
-    <script>
-      $(document).ready(function() {
-        $('#example').DataTable();
-      });
-    </script>
   </body>
 
   </html>
