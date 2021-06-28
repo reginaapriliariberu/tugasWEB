@@ -48,7 +48,7 @@ if (!isset($_SESSION['login_user'])) {
             <a class="nav-link" data-widget="pushmenu" href="#" style="color: white;"><i class="fas fa-bars"></i></a>
           </li>
           <li class="nav-item d-none d-sm-inline-block">
-            <a href="user.php" class="nav-link" style="color: white;">Home</a>
+            <a href="user.php" class="nav-link" style="color: white;">Home1</a>
           </li>
           <li class="nav-item d-none d-sm-inline-block">
             <a href="About.php" class="nav-link" style="color: white;">Contact</a>
