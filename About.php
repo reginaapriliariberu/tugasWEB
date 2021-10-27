@@ -110,6 +110,24 @@ if (!isset($_SESSION['login_user'])) {
                     </a>
                   </li>
                   <li class="nav-item">
+                    <a href="pesanan_pembeli.php" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Histori Pesanan</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pesanan_pembeli.php" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Pesanan Diterima</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pesanan_pembeli.php" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Pesanan Ditolak</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
                     <a href="About.php" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>About</p>
